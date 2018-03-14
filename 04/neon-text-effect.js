@@ -46,9 +46,10 @@ function demoShadowEffects(offset) {
 	// absolute position of the text (within a translation state)
 	var offsetX = offset.x
 	var offsetY = offset.y
+	const textYTranslate = 16
 	// gather information about the height of the font
 	var metrics = getMetrics('thequickbrownfox', ctx.font)
-	var textHeight = metrics.height * 1.2
+	var textHeight = metrics.height * 5
 	// loop through text-shadow based effects
 	for (var text in shadowStyles) {
 		var width = ctx.measureText(text).width
@@ -73,7 +74,7 @@ function demoShadowEffects(offset) {
 				ctx.shadowOffsetX = shadow.x + totalWidth
 				ctx.shadowOffsetY = shadow.y
 				ctx.shadowBlur = shadow.blur
-				ctx.fillText(text, -totalWidth + offsetX, offsetY + metrics.top)
+				ctx.fillText(text, -totalWidth + offsetX, offsetY + metrics.top + textYTranslate)
 			} else {
 				// just run pseudo-shadow
 				ctx.fillStyle = shadow.color
@@ -88,7 +89,7 @@ function demoShadowEffects(offset) {
 		// drawing the text in the foreground
 		if (style.color) {
 			ctx.fillStyle = style.color
-			ctx.fillText(text, offsetX, offsetY + metrics.top)
+			ctx.fillText(text, offsetX, offsetY + metrics.top + textYTranslate)
 		}
 		// jump to next em-line
 		ctx.translate(0, textHeight)
