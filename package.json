@@ -1,0 +1,10 @@
+{
+  "name": "canvas-text-experiments",
+  "version": "1.0.0",
+  "description": "a fancy wallpaper generator",
+  "main": "index.js",
+  "repository": "git@github.com:micahstubbs/canvas-text-experiments.git",
+  "author": "Micah Stubbs <micah.stubbs@gmail.com>",
+  "license": "Apache-2.0",
+  "private": false
+}
