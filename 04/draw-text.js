@@ -48,6 +48,7 @@ function changeDemo(hash) {
   window.onmousedown = false
   window.onmousemove = false
   if (window.timeout) window.clearTimeout(timeout)
+
   ctx.strokeStyle = '#000'
   ctx.fillStyle = '#000'
   ctx.lineWidth = 1
@@ -55,17 +56,7 @@ function changeDemo(hash) {
   ctx.globalAlpha = 1
   ctx.canvas.height = 1600
   ctx.canvas.width = 3840
-  // demoShadowEffects({x: 50, y: 0})
-  // demoShadowEffects({x: 220, y: 0})
-  // let x = 50
-  // let y = 0
-  // while (x < ctx.canvas.width) {
-  //   while (y < ctx.canvas.height) {
-  //     demoShadowEffects({x, y})
-  //     x += 220
-  //     y += 93
-  //   }
-  // }
+
   const grid = buildGrid({
     x0: 50,
     y0: 0,
