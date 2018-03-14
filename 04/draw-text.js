@@ -16,19 +16,23 @@ window.onload = function() {
 function buildGrid(props) {
   const { x0, y0, xStep, yStep, xMax, yMax } = props
   let grid = []
+
   let x = x0
+  if (typeof x === 'undefined') x = xStep
+
   let y = y0
+  if (typeof y === 'undefined') y = yStep
 
   // calculate xValues from x0 to xMax
   const xValues = []
-  while (x < xMax) {
+  while (x < xMax - xStep) {
     xValues.push(x)
     x += xStep
   }
 
   // calculate yValues from y0 to yMax
   const yValues = []
-  while (y < yMax) {
+  while (y < yMax - yStep) {
     yValues.push(y)
     y += yStep
   }
