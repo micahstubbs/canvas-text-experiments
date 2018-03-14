@@ -69,8 +69,8 @@ function changeDemo(hash) {
   const grid = buildGrid({
     x0: 50,
     y0: 0,
-    xStep: 220,
-    yStep: 93,
+    xStep: 180,
+    yStep: 120,
     xMax: ctx.canvas.width,
     yMax: ctx.canvas.height
   })
