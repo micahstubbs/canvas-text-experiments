@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+<title>HTML5: Text Effects</title>
+<script type="text/javascript" src="text-effects.js"></script>
+<script type="text/javascript" src="space-age-effect.js"></script>
+<script type="text/javascript" src="draw-text.js"></script>
+<style>
+body { color: #FFF; margin: 0; background: #000; user-select: none; -o-user-select:none; -moz-user-select: none; -khtml-user-select: none; -webkit-user-select: none; }
+div { padding: 5px 5px; z-index: 2; font-family: arial; clear: both; border-bottom: 1px solid rgba(0,0,0,0.2) }
+div#controls { text-shadow: 1px 1px 1px rgba(0,0,0,0.5); border-radius: 7px; position: absolute; top: 0; width: 260px; padding: 7px 10px; background: rgba(150,150,150,0.5); }
+br { clear: both }
+span.effects { float: left; margin-right: 10px; color: #000; font-size: 16px; font-weight: bold; text-shadow: 1px 1px 1px rgba(255,255,255,0.25); }
+input, select { float: right; font-size: 14px; width: 160px; }
+a { color: #ccf }
+a:hover { color: #ff0000 }
+</style>
+</head>
+<body>
+<div id="controls" onmousedown="event.stopPropagation();">
+<div><span class="effects">CANVAS:</span><select style="position: relative; top: -3px; float: right; font-size: 20px" onchange="changeDemo(this.options[this.selectedIndex].innerHTML.substr(4))"><option id="shadow">(1) shadow</option><option id="patterngradientreflect">(2) pattern+gradient+reflect</option><option id="neonrainbowjitter">(3) neon+rainbow+jitter</option><option id="innershadowpatterngradient">(4) innershadow+pattern+gradient</option><option id="spaceageselect">(5) spaceage</option></select><br></div>
+</div>
+</body>
+</html>
