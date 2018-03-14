@@ -9,7 +9,7 @@ body {
   -webkit-user-select: none;
 }
 div {
-  padding: 5px 5px;
+  padding: 0px 0px;
   z-index: 2;
   font-family: arial;
   clear: both;

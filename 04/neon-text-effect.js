@@ -45,7 +45,7 @@ function demoShadowEffects() {
 	ctx.font = '60px Futura, Helvetica, sans-serif'
 	// absolute position of the text (within a translation state)
 	var offsetX = 50
-	var offsetY = 62
+	var offsetY = 0
 	// gather information about the height of the font
 	var metrics = getMetrics('thequickbrownfox', ctx.font)
 	var textHeight = metrics.height * 1.2
