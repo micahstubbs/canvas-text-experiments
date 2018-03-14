@@ -12,7 +12,7 @@ var shadowStyles = {
 	}
 }
 
-function demoShadowEffects() {
+function demoShadowEffects(offset) {
 	function parseShadow(shadows) {
 		shadows = shadows.split(', ')
 		var ret = []
@@ -44,8 +44,8 @@ function demoShadowEffects() {
 	ctx.save()
 	ctx.font = '60px Futura, Helvetica, sans-serif'
 	// absolute position of the text (within a translation state)
-	var offsetX = 50
-	var offsetY = 0
+	var offsetX = offset.x
+	var offsetY = offset.y
 	// gather information about the height of the font
 	var metrics = getMetrics('thequickbrownfox', ctx.font)
 	var textHeight = metrics.height * 1.2
@@ -55,7 +55,7 @@ function demoShadowEffects() {
 		var style = shadowStyles[text]
 		// add a background to the current effect
 		ctx.fillStyle = style.background
-		ctx.fillRect(0, offsetY, ctx.canvas.width, textHeight - 1)
+		ctx.fillRect(offsetX, offsetY, ctx.canvas.width, textHeight - 1)
 		// parse text-shadows from css
 		var shadows = parseShadow(style.shadow)
 		// loop through the shadow collection

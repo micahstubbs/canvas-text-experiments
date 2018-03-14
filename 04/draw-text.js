@@ -26,7 +26,17 @@ function changeDemo(hash) {
   ctx.globalAlpha = 1
   ctx.canvas.height = 1600
   ctx.canvas.width = 3840
-  demoShadowEffects()
+  // demoShadowEffects({x: 50, y: 0})
+  // demoShadowEffects({x: 220, y: 0})
+  let x = 50
+  let y = 0
+  while (x < ctx.canvas.width) {
+    while (y < ctx.canvas.height) {
+      demoShadowEffects({x, y})
+      x += 220
+      y += 93
+    }
+  }
 }
 
 var createInterlace = function(size, color1, color2) {
