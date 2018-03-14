@@ -24,8 +24,8 @@ function changeDemo(hash) {
   ctx.lineWidth = 1
   ctx.globalCompositeOperation = 'source-over'
   ctx.globalAlpha = 1
-  ctx.canvas.height = 820
-  ctx.canvas.width = 490
+  ctx.canvas.height = 1600
+  ctx.canvas.width = 3840
   demoShadowEffects()
 }
 
