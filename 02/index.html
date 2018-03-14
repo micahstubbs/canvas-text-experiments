@@ -9,7 +9,10 @@
 </head>
 <body>
 <div id="controls" onmousedown="event.stopPropagation();">
-<div><span class="effects">CANVAS:</span><select style="position: relative; top: -3px; float: right; font-size: 20px" onchange="changeDemo(this.options[this.selectedIndex].innerHTML.substr(4))"><option id="shadow">(1) shadow</option><option id="patterngradientreflect">(2) pattern+gradient+reflect</option><option id="neonrainbowjitter">(3) neon+rainbow+jitter</option><option id="innershadowpatterngradient">(4) innershadow+pattern+gradient</option><option id="spaceageselect">(5) spaceage</option></select><br></div>
+<div>
+  <span class="effects">CANVAS:</span>
+  <select style="position: relative; top: -3px; float: right; font-size: 20px" onchange="changeDemo(this.options[this.selectedIndex].innerHTML.substr(4))">
+    <option id="shadow">(1) shadow</option>
 </div>
 </body>
 </html>
