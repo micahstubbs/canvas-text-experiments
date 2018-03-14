@@ -5,7 +5,7 @@
 const shadowColor = '#AAFF00'
 var shadowStyles = {
 	// http://line25.com/articles/using-css-text-shadow-to-create-cool-text-effects
-	Neon: {
+	"one": {
 		color: '#FFF',
 		background: '#000',
 		shadow: `0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px ${shadowColor}, 0 0 70px ${shadowColor}, 0 0 80px ${shadowColor}, 0 0 100px ${shadowColor}, 0 0 150px ${shadowColor}`
