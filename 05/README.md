@@ -1,3 +1,7 @@
+random dropout
+
+---
+
 remove select menu and canvas header text.  make a grid of text.
 
 ---
