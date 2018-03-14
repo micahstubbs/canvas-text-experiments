@@ -27,48 +27,48 @@ function changeDemo(hash) {
   ctx.globalAlpha = 1
   if (document.getElementById('spaceage'))
     document.getElementById('spaceage').style.display = 'none'
-  if (hash == 'spaceage') {
-    document.getElementById('spaceageselect').selected = true
-    canvas.width = window.innerWidth
-    canvas.height = 700
-    // spaceage text-demo
-    textcontrol = spaceAgeEffect({
-      color: 110,
-      x: 360,
-      y: 170,
-      definition: 0.25,
-      start: 50,
-      end: 1000,
-      alpha: 0.19,
-      cosA: 110,
-      cosB: -1.0,
-      sinA: 58,
-      sinB: -0.6,
-      size: 120
-    })
-    textcontrol.draw()
-  } else if (hash == 'pattern+gradient+reflect') {
-    document.getElementById('patterngradientreflect').selected = true
-    ctx.canvas.height = 400
-    ctx.canvas.width = 1100
-    sleekZebraEffect()
-  } else if (hash == 'neon+rainbow+jitter') {
-    document.getElementById('neonrainbowjitter').selected = true
-    ctx.canvas.height = 700
-    ctx.canvas.width = 700
-    neonLightEffect()
-  } else if (hash == 'innershadow+pattern+gradient') {
-    document.getElementById('innershadowpatterngradient').selected = true
-    document.body.style.background = "url('" + op_8x8.data + "') fixed"
-    ctx.canvas.height = 400
-    ctx.canvas.width = 500
-    innerShadow()
-  } else {
+  // if (hash == 'spaceage') {
+  //   document.getElementById('spaceageselect').selected = true
+  //   canvas.width = window.innerWidth
+  //   canvas.height = 700
+  //   // spaceage text-demo
+  //   textcontrol = spaceAgeEffect({
+  //     color: 110,
+  //     x: 360,
+  //     y: 170,
+  //     definition: 0.25,
+  //     start: 50,
+  //     end: 1000,
+  //     alpha: 0.19,
+  //     cosA: 110,
+  //     cosB: -1.0,
+  //     sinA: 58,
+  //     sinB: -0.6,
+  //     size: 120
+  //   })
+  //   textcontrol.draw()
+  // } else if (hash == 'pattern+gradient+reflect') {
+  //   document.getElementById('patterngradientreflect').selected = true
+  //   ctx.canvas.height = 400
+  //   ctx.canvas.width = 1100
+  //   sleekZebraEffect()
+  // } else if (hash == 'neon+rainbow+jitter') {
+  //   document.getElementById('neonrainbowjitter').selected = true
+  //   ctx.canvas.height = 700
+  //   ctx.canvas.width = 700
+  //   neonLightEffect()
+  // } else if (hash == 'innershadow+pattern+gradient') {
+  //   document.getElementById('innershadowpatterngradient').selected = true
+  //   document.body.style.background = "url('" + op_8x8.data + "') fixed"
+  //   ctx.canvas.height = 400
+  //   ctx.canvas.width = 500
+  //   innerShadow()
+  // } else {
     document.getElementById('shadow').selected = true
     ctx.canvas.height = 820
     ctx.canvas.width = 490
     demoShadowEffects()
-  }
+  // }
 }
 
 var createInterlace = function(size, color1, color2) {
