@@ -13,6 +13,35 @@ window.onload = function() {
   changeDemo(window.location.hash.replace('#', ''))
 }
 
+function buildGrid(props) {
+  const { x0, y0, xStep, yStep, xMax, yMax } = props
+  let grid = []
+  let x = x0
+  let y = y0
+
+  // calculate xValues from x0 to xMax
+  const xValues = []
+  while (x < xMax) {
+    xValues.push(x)
+    x += xStep
+  }
+
+  // calculate yValues from y0 to yMax
+  const yValues = []
+  while (y < yMax) {
+    yValues.push(y)
+    y += yStep
+  }
+
+  // calculate grid [x,y] pairs
+  xValues.forEach(xV => {
+    yValues.forEach(yV => {
+      grid.push([xV, yV])
+    })
+  })
+  return grid
+}
+
 function changeDemo(hash) {
   document.body.style.background = '#000'
   window.location.hash = '#' + hash
@@ -28,15 +57,26 @@ function changeDemo(hash) {
   ctx.canvas.width = 3840
   // demoShadowEffects({x: 50, y: 0})
   // demoShadowEffects({x: 220, y: 0})
-  let x = 50
-  let y = 0
-  while (x < ctx.canvas.width) {
-    while (y < ctx.canvas.height) {
-      demoShadowEffects({x, y})
-      x += 220
-      y += 93
-    }
-  }
+  // let x = 50
+  // let y = 0
+  // while (x < ctx.canvas.width) {
+  //   while (y < ctx.canvas.height) {
+  //     demoShadowEffects({x, y})
+  //     x += 220
+  //     y += 93
+  //   }
+  // }
+  const grid = buildGrid({
+    x0: 50,
+    y0: 0,
+    xStep: 220,
+    yStep: 93,
+    xMax: ctx.canvas.width,
+    yMax: ctx.canvas.height
+  })
+  grid.forEach(point => {
+    demoShadowEffects({ x: point[0], y: point[1] })
+  })
 }
 
 var createInterlace = function(size, color1, color2) {
