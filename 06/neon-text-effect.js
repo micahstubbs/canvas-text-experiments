@@ -42,7 +42,7 @@ function demoShadowEffects(offset) {
 		return ret
 	}
 	ctx.save()
-	ctx.font = '60px Futura, Helvetica, sans-serif'
+	ctx.font = '20px Futura, Helvetica, sans-serif'
 	// absolute position of the text (within a translation state)
 	var offsetX = offset.x
 	var offsetY = offset.y

@@ -71,11 +71,11 @@ function changeDemo(hash) {
   const grid = buildGrid({
     x0: 50,
     y0: 0,
-    xStep: 200,
-    yStep: 120,
+    xStep: 90,
+    yStep: 90,
     xMax: ctx.canvas.width,
     yMax: ctx.canvas.height,
-    dropout: 0.4
+    dropout: 0.3
   })
   grid.forEach(point => {
     demoShadowEffects({ x: point[0], y: point[1] })
