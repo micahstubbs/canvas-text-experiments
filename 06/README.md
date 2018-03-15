@@ -1,4 +1,4 @@
-download png
+smaller text and proportionate spacing
 
 ---
 
