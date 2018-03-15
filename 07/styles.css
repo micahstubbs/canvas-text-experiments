@@ -1,0 +1,10 @@
+body {
+  color: #000;
+  margin: 0;
+  background: #000;
+  user-select: none;
+  -o-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+}
