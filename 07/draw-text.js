@@ -24,10 +24,15 @@ window.onload = function() {
     /* Change MIME type to trick the browser to downlaod the file instead of displaying it */
     dt = dt.replace(/^data:image\/[^;]*/, 'data:application/octet-stream')
 
+    // set the filename
+    const filename = 'canvas-3840x1600.png'
+    const headers = 'Content-Disposition'
+    const data = 'application/octet-stream'
+
     /* In addition to <a>'s "download" attribute, you can define HTTP-style headers */
     dt = dt.replace(
       /^data:application\/octet-stream/,
-      'data:application/octet-stream;headers=Content-Disposition%3A%20attachment%3B%20filename=Canvas.png'
+      `data:${data};headers=${headers}%3A%20attachment%3B%20filename=${filename}`
     )
 
     this.href = dt
